@@ -1,0 +1,31 @@
+<Defs>
+	<ThingDef ParentName="ResourceBaseEnargo">
+		<defName>FibrilFiber</defName>
+		<label>fibril fiber</label>
+		<category>Item</category>
+		<description>A cluster of fibers harvested from the Fibril plant.</description>
+		<graphicData>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<texPath>Fibril/FibrilFiber</texPath>
+		</graphicData>
+		<ingestible>
+			<preferability>DesperateOnly</preferability>
+			<ingestEffect>EatVegetarian</ingestEffect>
+			<ingestSound>RawVegetable_Eat</ingestSound>
+			<foodType>Plant</foodType>
+		</ingestible>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>0.8</Flammability>
+			<DeteriorationRate>10</DeteriorationRate>
+			<MarketValue>0.5</MarketValue>
+			<Nutrition>0.05</Nutrition>
+			<Mass>0.02</Mass>
+		</statBases>
+		<rotatable>false</rotatable>
+		<tickerType>Rare</tickerType>
+		<thingCategories>
+			<li>PlantMatter</li>
+		</thingCategories>
+	</ThingDef>
+</Defs>

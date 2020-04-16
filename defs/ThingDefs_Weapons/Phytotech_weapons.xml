@@ -1,0 +1,58 @@
+<Defs>
+	<ThingDef ParentName="BaseMeleeWeapon_Blunt_Quality">
+		<defName>PhytoHammer</defName>
+		<label>Phyto Hammer</label>
+		<techLevel>Spacer</techLevel>
+		<description>Originally used for percussive maintainence on farming equipment, now provides social adjustments for tribal relationships. Now with customizable handles!</description>
+		<graphicData>
+			<texPath>Phytotech/Hammer</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<uiIconScale>1.2</uiIconScale>
+	    <costStuffCount>25</costStuffCount>
+		<costList>
+			<FibrilFiber>50</FibrilFiber>
+		</costList>
+		<statBases>
+			<WorkToMake>6000</WorkToMake>
+			<Mass>4</Mass>
+		</statBases>
+		<equippedAngleOffset>-65</equippedAngleOffset>
+		<recipeMaker>
+			<researchPrerequisite>PhytoMeleeTech</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>5</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Woody</li>
+			<li>Fabric</li>
+			<li>Leathery</li>
+		</stuffCategories>
+	    <tradeability>Sellable</tradeability>
+		<weaponTags>
+			<li>NonNeolithicOnlyMelee</li>
+		</weaponTags>
+		<tools>
+			<li>
+				<label>handle</label>
+				<capacities>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>head</label>
+				<labelUsedInLogging>false</labelUsedInLogging>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>16.7</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+	</ThingDef>
+</Defs>

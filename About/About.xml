@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Syntho Expac 1</name>
+	<author>SkylorBeck</author>
+	<packageId>SkylorBeck.Syntho.Expac1</packageId>
+	<url>http://steamcommunity.com/sharedfiles/filedetails/?id=1234438466</url>
+	<supportedVersions>
+		<li>1.1</li>
+	</supportedVersions>
+	<modDependencies>
+		<li>
+			<packageId>erdelf.HumanoidAlienRaces</packageId>
+			<displayName>Humanoid Alien Races 2.0</displayName>
+			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=839005762</steamWorkshopUrl>
+		</li>
+		<li>
+			<packageId>SkylorBeck.Syntho.Base</packageId>
+			<displayName>Syntho Base</displayName>
+			<steamWorkshopUrl>http://steamcommunity.com/sharedfiles/filedetails/?id=1234438466</steamWorkshopUrl>
+		</li>
+	</modDependencies>
+	<loadBefore>
+	</loadBefore>
+	<loadAfter>
+		<li>erdelf.HumanoidAlienRaces</li>
+		<li>SkylorBeck.Syntho.Base</li>
+	</loadAfter>
+	<incompatibleWith />
+	<description>
+Like what I do?
+[url=https://ko-fi.com/chadsexington][img]https://i.imgur.com/Rw0ZpIx.png?1[/img][/url]
+</description>
+</ModMetaData>

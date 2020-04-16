@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ResearchProjectDef>
+		<defName>Phytotech</defName>
+		<tab>SynthoResearchTab</tab>
+		<label>Phytotech</label>
+		<description>By utilizing spacer componenets and Fibril fibers, a surrogate (and parasitic!) limb or organ can be created. Side Effects include: increased caloric consumption, feelings of hunger, slight discomfort at install site and increased presence of bugs.</description>
+		<baseCost>3000</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>EnargoBlendTech</li>
+			<li>EnargoPower</li>
+			<li>Fabrication</li>
+			<li>FibrilPlanting</li>
+		</prerequisites>
+		<researchViewX>2.00</researchViewX>
+		<researchViewY>4</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>FibrilPlanting</defName>
+		<tab>SynthoResearchTab</tab>
+		<label>Fibril Planting</label>
+		<description>The basics of how to grow and harvest Fibril.</description>
+		<baseCost>800</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>EnargoPlanting</li>
+		</prerequisites>
+		<researchViewX>1.00</researchViewX>
+		<researchViewY>3.00</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>PhytoMeleeTech</defName>
+		<tab>SynthoResearchTab</tab>
+		<label>Phytotech Maintenence Tools</label>
+		<description>For use ONLY with approved Phytotech brand heavy equipment.</description>
+		<baseCost>1200</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>EnargoPlanting</li>
+		</prerequisites>
+		<researchViewX>2.00</researchViewX>
+		<researchViewY>4.00</researchViewY>
+	</ResearchProjectDef>
+
+</Defs>

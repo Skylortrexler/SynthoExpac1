@@ -18,6 +18,7 @@
     </techHediffsTags>
     <statBases>
       <WorkToMake>22000</WorkToMake>
+      <Mass>1</Mass>
     </statBases>
     <recipeMaker>
       <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
@@ -28,7 +29,7 @@
       <skillRequirements>
         <Crafting>8</Crafting>
       </skillRequirements>
-      <researchPrerequisite>Phytotech</researchPrerequisite>
+      <researchPrerequisite>PhytotechOrganics</researchPrerequisite>
       <recipeUsers>
         <li>FabricationBench</li>
       </recipeUsers>
@@ -129,7 +130,9 @@
       <ComponentSpacer>2</ComponentSpacer>
     </costList>
     <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
-    
+    <statBases>
+      <Mass>0.5</Mass>
+    </statBases>
   </ThingDef>
   
    <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
@@ -311,7 +314,9 @@
       <ComponentSpacer>2</ComponentSpacer>
     </costList>
     <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
-    
+	<statBases>
+      <Mass>2</Mass>
+    </statBases>
   </ThingDef>
   
    <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
@@ -532,6 +537,20 @@
     <labelNoun>a Phytotech arm</labelNoun>
     <description>An installed phytotech arm.</description>
     <descriptionHyperlinks><ThingDef>PhytotechArm</ThingDef></descriptionHyperlinks>
+	<comps>
+		<li Class="HediffCompProperties_VerbGiver">
+			<tools>
+				<li>
+					<label>fist</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>12</power>
+					<cooldownTime>2</cooldownTime>
+				</li>
+			</tools>
+		</li>
+    </comps>
     <spawnThingOnRemoved>PhytotechArm</spawnThingOnRemoved>
 	<addedPartProps>
 		<solid>true</solid>
@@ -560,7 +579,7 @@
       <Mass>6</Mass>
     </statBases>
   </ThingDef>
-  
+ 
    <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
     <defName>InstallPhytotechArm</defName>
     <label>install phytotech arm</label>
@@ -595,6 +614,20 @@
     <labelNoun>a Phytotech hand</labelNoun>
     <description>An installed phytotech hand.</description>
     <descriptionHyperlinks><ThingDef>PhytotechHand</ThingDef></descriptionHyperlinks>
+	<comps>
+		<li Class="HediffCompProperties_VerbGiver">
+			<tools>
+				<li>
+					<label>fist</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>12</power>
+					<cooldownTime>2</cooldownTime>
+				</li>
+			</tools>
+		</li>
+    </comps>
     <spawnThingOnRemoved>PhytotechHand</spawnThingOnRemoved>
 	<addedPartProps>
 		<solid>true</solid>
@@ -778,4 +811,150 @@
     <addsHediff>PhytotechFoot</addsHediff>
   </RecipeDef>
 
- </Defs>
+<!--brain stuff-->
+
+<ThingDef Name="BodyPartPhytotechNeuroBase" ParentName="BodyPartPhytotechBase" Abstract="True">
+    <recipeMaker>
+		<researchPrerequisite>PhytotechNeuro</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>10</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+</ThingDef>
+
+<ThingDef ParentName="BodyPartPhytotechNeuroBase">
+	<defName>PhytoStimulator</defName>
+    <label>phyto-stimulator</label>
+    <description>A brain implant that stimulates the users cortex. Can be programmed to counter the effects of Dementia or Alzheimer's.</description>
+    <descriptionHyperlinks>
+		<RecipeDef>InstallPhytoStimA</RecipeDef>
+		<RecipeDef>InstallPhytoStimB</RecipeDef>
+	</descriptionHyperlinks>
+    <thingSetMakerTags>
+		<li>RewardStandardLowFreq</li>
+    </thingSetMakerTags>
+    <costList>
+		<FibrilFiber>10</FibrilFiber>
+		<RawEnargo>20</RawEnargo>
+		<ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <techHediffsTags>
+		<li>Advanced</li>
+    </techHediffsTags>
+</ThingDef>
+
+<RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>InstallPhytoStimA</defName>
+    <label>install phyto-stim (Dementia)</label>
+    <description>Install a phyto-stimulator programmed to counter Dementia.</description>
+    <descriptionHyperlinks><ThingDef>PhytoStimulator</ThingDef></descriptionHyperlinks>
+    <jobString>Installing phyto-stimulator.</jobString>
+    <ingredients>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>PhytoStimulator</li>
+				</thingDefs>
+			</filter>
+			<count>1</count>
+		</li>
+    </ingredients>
+    <fixedIngredientFilter>
+		<thingDefs>
+			<li>PhytoStimulator</li>
+		</thingDefs>
+    </fixedIngredientFilter>
+    <removesHediff>Dementia</removesHediff>
+</RecipeDef>
+
+
+<RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>InstallPhytoStimB</defName>
+    <label>install phyto-stim (Alzheimers)</label>
+    <description>Install a phyto-stimulator programmed to counter Alzheimer's.</description>
+    <descriptionHyperlinks><ThingDef>PhytoStimulator</ThingDef></descriptionHyperlinks>
+    <jobString>Installing phyto-stimulator.</jobString>
+    <ingredients>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>PhytoStimulator</li>
+				</thingDefs>
+			</filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+		<thingDefs>
+			<li>PhytoStimulator</li>
+		</thingDefs>
+    </fixedIngredientFilter>
+    <removesHediff>Alzheimers</removesHediff>
+  </RecipeDef>
+  
+ <!--Sleepaway-->
+<ThingDef ParentName="BodyPartPhytotechNeuroBase">
+    <defName>PhytoEnergizer</defName>
+    <label>phyto-energizer</label>
+    <description>A brain implant that stimulates the thalamus, hypothalamus, and pineal gland. Reduces the users need for sleep by inhibiting the brains adenosine receptors.</description>
+    <descriptionHyperlinks>
+		<RecipeDef>InstallEnergizer</RecipeDef>
+	</descriptionHyperlinks>
+    <thingSetMakerTags>
+		<li>RewardStandardLowFreq</li>
+    </thingSetMakerTags>
+    <costList>
+		<FibrilFiber>10</FibrilFiber>
+		<RawEnargo>30</RawEnargo>
+		<ComponentSpacer>8</ComponentSpacer>
+    </costList>
+    <techHediffsTags>
+		<li>Advanced</li>
+    </techHediffsTags>
+</ThingDef>
+  
+<RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
+    <defName>InstallEnergizer</defName>
+    <label>install phyto-energizer</label>
+    <description>Install a phyto-energizer.</description>
+    <descriptionHyperlinks><ThingDef>PhytoEnergizer</ThingDef></descriptionHyperlinks>
+    <jobString>Installing phyto-energizer.</jobString>
+    <ingredients>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>PhytoEnergizer</li>
+				</thingDefs>
+			</filter>
+			<count>1</count>
+		</li>
+    </ingredients>
+    <fixedIngredientFilter>
+		<thingDefs>
+			<li>PhytoEnergizer</li>
+		</thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+		<li>Brain</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>PhytoEnergizer</addsHediff>
+</RecipeDef>
+
+<HediffDef ParentName="ImplantHediffBase">
+    <defName>PhytoEnergizer</defName>
+    <label>phyto-energizer</label>
+    <labelNoun>a phyto-energizer</labelNoun>
+    <description>An installed phyto-energizer implant.</description>
+    <descriptionHyperlinks><ThingDef>PhytoEnergizer</ThingDef></descriptionHyperlinks>
+    <stages>
+		<li>
+			<restFallFactorOffset>-0.35</restFallFactorOffset>
+			<statOffsets>
+				<RestRateMultiplier>0.35</RestRateMultiplier>
+			</statOffsets>
+		</li>
+    </stages>
+    <spawnThingOnRemoved>PhytoEnergizer</spawnThingOnRemoved>
+</HediffDef>
+
+</Defs>

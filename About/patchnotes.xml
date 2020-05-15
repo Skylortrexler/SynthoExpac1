@@ -1,24 +1,14 @@
-1.0
-added Phytotech body parts! Plant based replacements!
-added fibril
+0.9
+added Phytotech body parts. Plant based replacements
+added fibril, a plant that can be used for many things
+added phytotech Sniper, Shotgun and SMG
+added phytotech implants that 
+	-remove alzheimers and dementia
+	-makes you need 35% less sleep and lets you stay awake 35% longer
 
+0.9.1
+upscaled textures to address concerns about visuals
 
 todo:
-fibril uses - cloth?
-brain implant to counter dimentia?
 
-patch overcoat and bodysuit to use 
-      <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
-      <StuffEffectMultiplierInsulation_Cold>0.55</StuffEffectMultiplierInsulation_Cold>
-      <StuffEffectMultiplierInsulation_Heat>0.55</StuffEffectMultiplierInsulation_Heat>
- in statbases.
- 
- Finish crafting recipe for hammer.
-
-research pass
-log pass
-
-planned:
-new guns? shotgun? laser rifle?
-new clothing? armor?
-
+about.xml

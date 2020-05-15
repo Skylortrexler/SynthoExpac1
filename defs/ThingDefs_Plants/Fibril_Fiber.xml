@@ -21,7 +21,19 @@
 			<MarketValue>0.5</MarketValue>
 			<Nutrition>0.05</Nutrition>
 			<Mass>0.02</Mass>
+			<BluntDamageMultiplier>1.0</BluntDamageMultiplier>
+		    <StuffPower_Insulation_Cold>6</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>6</StuffPower_Insulation_Heat>
+			<StuffPower_Armor_Blunt>0.3</StuffPower_Armor_Blunt>
+			<StuffPower_Armor_Heat>0.4</StuffPower_Armor_Heat>
 		</statBases>
+		<stuffProps>
+			<color>(182,255,0)</color>
+			<commonality>0.0025</commonality>
+			<categories>
+				<li>Fabric</li>
+			</categories>
+		</stuffProps>
 		<rotatable>false</rotatable>
 		<tickerType>Rare</tickerType>
 		<thingCategories>
